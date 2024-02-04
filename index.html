@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bulp Project</title>
+	<style type="text/css">		
+		body{
+			padding: 0;
+			margin-top: 100px;
+
+		}
+		#box{
+			background-color: lightpink;
+			text-align: center;
+			width:fit-content;
+			margin: auto;
+			border-radius: 8px;
+			animation-name:box;
+			animation-duration:6s;
+			animation-iteration-count:infinite;
+			position: relative;
+
+		}
+		button{
+			padding: 100px 100px;
+			margin: 10px 20px;
+			color: purple;
+			background-color: transparent;
+			border: none;
+			border-radius: 5px 10px;
+			font-size: 20px;
+			text-transform: capitalize;
+			cursor: grab;
+		}
+		img{
+			margin-top: 10px;
+			padding: 10px 70px;
+			filter: brightness(130%);
+		}
+		#box:hover{
+			box-shadow: -30px -4px 100px 64px #FFF736 inset;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img id="call" src="img/pic_bulboff.gif">
+		<div>
+			<button type="button" onmouseenter="on()" onmouseleave="off()">Touch me</button>
+		</div>
+		<script type="text/javascript">
+			const a=document.getElementById("call");
+			function on()
+			{
+				a.src="img/pic_bulbon.gif"
+			}
+			function off()
+			{
+				a.src="img/pic_bulboff.gif"
+			}
+		</script>
+	</div>
+</body>
+
